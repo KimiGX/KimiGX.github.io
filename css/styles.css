@@ -1,0 +1,153 @@
+body{
+    background: url(../assets/img/bj.jpg) no-repeat center top;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container, .login-box, .social, .login-box form input, .login-box form button{
+    border-radius: 16px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    width: 1250px;
+    height: 650px;
+}
+
+.container span{
+    display: none;
+}
+
+.login-box{
+    padding: 15px;
+    width: 350px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.login-box form{
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    gap: 10px;
+    margin: 10px;
+}
+
+.login-box form label{
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+
+.login-box form input{
+    outline-style: none;
+    border: none;
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+}
+
+.login-box form button{
+    width: 100px;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin: 2rem auto;
+}
+
+.description-box{
+    display: grid;
+    text-align: center;
+    line-height: 25px;
+    position: relative;
+    gap: 50px;
+}
+
+.description__title{
+    font-size: 7rem;
+}
+
+.description-box p {
+    width: 550px;
+    margin: auto;
+}
+
+.social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    width: 300px;
+    height: 70px;
+    position: relative;
+    right: -1rem;
+    top: 5rem;
+}
+
+.social img{
+    width: 50px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+/**Movil and tablet**/
+@media (max-width: 990px) {
+    html,
+    body{
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        justify-content: center;
+        width: 300px;
+        height: 550px;
+        background: none;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+
+    .container span{
+        display: flex;
+        position: relative;
+        top: -3rem;
+        margin: auto;
+        font-size: 35px;
+        font-weight: 700;
+    }
+
+    .login-box{
+        width: 300px;
+        height: 450px;
+        position: relative;
+        margin: auto;
+        top: -2rem;
+    }
+
+    .login-box form{
+        position: relative;
+    }
+
+    .description-box h1, p{
+        display: none;
+    }
+
+    .social{
+        display: flex;
+        position: relative;
+        margin: auto;
+        left: 1px;
+        top: 5px;
+    }
+}
